@@ -211,3 +211,16 @@ websocket.OnClose:Connect(function()
 end)
 
 print("RAYAN HUB Auto Joiner loaded successfully")
+task.spawn(function()
+    while true do
+        for i = 0, 1, 0.01 do
+            local color = Color3.fromHSV(i, 1, 1)
+            
+            titleLabel.TextColor3 = color
+            toggleButton.TextColor3 = color
+            statusLabel.TextColor3 = color
+            
+            task.wait(0.05)
+        end
+    end
+end)
